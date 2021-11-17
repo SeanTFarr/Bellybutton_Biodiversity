@@ -12,7 +12,7 @@ Labs across the country have had success in synthesizing meat from algae, fungi,
 ----------
 ## Navigating the page:
 Before sending you straight to the page, here is what to look for and some clarity about what you are about to see.
-### **Select ID# from dropdown list**. This will give you the demographic information of the test subject and will set up the interactive charts.
+### First select ID# from dropdown list. This will give you the demographic information of the test subject and will set up the interactive charts.
 <img src=static\images\dropdown.png>
 
 The three charts on the dashboard are:
