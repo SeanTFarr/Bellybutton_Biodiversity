@@ -66,11 +66,11 @@ function buildCharts(sample) {
     var firstSample = sampleArray[0];
     // 6. Create variables that hold the otu_ids, otu_labels, and sample_values.
     var otu_ids = firstSample.otu_ids.slice(0, 10).reverse();
-    console.log(otu_ids);
+    // console.log(otu_ids);
     var otu_labels = firstSample.otu_labels.slice(0, 10).reverse();
-    console.log(otu_labels);
+    // console.log(otu_labels);
     var sample_values = firstSample.sample_values.slice(0, 10).reverse();
-    console.log(sample_values);
+    // console.log(sample_values);
     // 7. Create the yticks for the bar chart.
     // Hint: Get the the top 10 otu_ids and map them in descending order  
     //  so the otu_ids with the most bacteria are last. 
@@ -95,14 +95,18 @@ function buildCharts(sample) {
     Plotly.newPlot("bar", barData, barLayout)
 
     // 1. Create the trace for the bubble chart.
+    var ids = firstSample.otu_ids
+    var samples = firstSample.sample_values
+    var o_labels = firstSample.otu_labels
+
     var bubbleData = [{
-      x: otu_ids,
-      y: sample_values,
-      text: otu_labels,
+      x: ids,
+      y: samples,
+      text: o_labels,
       type: 'scatter',
       mode: "markers",
-      marker: {size: sample_values, 
-        color: otu_ids,
+      marker: {size: samples, 
+        color: ids,
         colorscale: 'Portland'
       }
     }
